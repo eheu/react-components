@@ -3,10 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --env.mode development",
+    "serve": "serve build -l 3002",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "onchange \"src/**/*\" -- npm run build"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^5.0.0-beta.16",
+    "webpack-cli": "^3.3.11"
+  }
 }
